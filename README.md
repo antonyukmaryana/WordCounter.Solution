@@ -11,7 +11,11 @@ DETAILED DESCRIPTION
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **BEHAVIOR** | INPUT | OUTPUT |
+| 1.When a user enter a word and another same word the program shows "1" | "cat", "cat" | "1" |
+| 2.When a user enter a word and another same two or more words the program shows number of words | "cat", "cat, cat" | "2" |
+| 3.When a user enter a word and another word that is a part of entered word the program shows "0" | "cat", "cathedral" | "0" |
+| 4.A program will accept both lower case and uppercase matches|"cat", "Cat,Cat" | "2" |
+| 5.When a user enter numeric or non-alpha characters, a program display "Please enter letters only" | "123", "cat" | "Please enter letters only" |
 
 ## Setup/Installation Requirements
 
