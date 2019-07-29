@@ -1,7 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WordCounter.Models;
 
-
 namespace WordCounter.Tests
 {
     [TestClass]
@@ -10,17 +9,22 @@ namespace WordCounter.Tests
         [TestMethod]
         public void Count_CountYourWordInTheString_Number()
         {
-            //Act
-          //Assert
-          Assert.AreEqual(1, RepeatCounter.Counting("cat", "cat"));
+            
+            Assert.AreEqual(1, RepeatCounter.Counting("cat", "cat"));
+        }
+
+        [TestMethod]
+        public void Count_CountYourWordInStringOnlyWhenCompleteMatch_Number()
+        {
+           
+            Assert.AreEqual(0, RepeatCounter.Counting("cat", "We visited a lot of cathedral in Belgium"));
         }
         
-        [TestMethod]
-            public void Count_CountYourWordInStringMultiple_Number()
-            {
-              //Act
-              //Assert
-              Assert.AreEqual(5, RepeatCounter.Counting("cat", "I love my cat cat cat cat cat"));
-            }
+//        [TestMethod]
+//        public void Count_CountYourWordInStringMultiple_Number()
+//        {
+//            
+//            Assert.AreEqual(5, RepeatCounter.Counting("cat", "I love my cat cat cat cat cat"));
+//        }
     }
 }
