@@ -23,7 +23,7 @@ namespace WordCounter.Models
             
             foreach (string word in words)
             {
-                if (searchWord.Equals(word))
+                if (searchWord.Equals(word,StringComparison.OrdinalIgnoreCase))
                 {
                     counter++;
                 }

@@ -17,14 +17,15 @@ namespace WordCounter.Tests
         public void Count_CountYourWordInStringOnlyWhenCompleteMatch_Number()
         {
            
-            Assert.AreEqual(0, RepeatCounter.Counting("cat", "We visited a lot of cathedral in Belgium"));
+            Assert.AreEqual(0, RepeatCounter.Counting("cat", "We visited a lot of cathedrals in Belgium"));
         }
         
-//        [TestMethod]
-//        public void Count_CountYourWordInStringMultiple_Number()
-//        {
-//            
-//            Assert.AreEqual(5, RepeatCounter.Counting("cat", "I love my cat cat cat cat cat"));
-//        }
+[TestMethod]
+        public void Count_CountYourWordCapitalLowerCase_Number()
+        {
+           
+            Assert.AreEqual(2, RepeatCounter.Counting("cat", "Cat  cat - we yelled"));
+        }
+
     }
 }
