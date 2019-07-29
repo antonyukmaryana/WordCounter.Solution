@@ -6,12 +6,30 @@ namespace WordCounter.Models
     {
         static void Main()
         {
-            
+            Console.WriteLine("Welcome to Word Counter");
+            Console.WriteLine("Please enter your word");
+            string searchWord = Console.ReadLine();
+            Console.WriteLine("Enter your sentence:");
+            string sentence = Console.ReadLine();
+
+            Console.WriteLine("Your word appears:" + Counting(sentence, searchWord));
         }
 
-        public int Counting(string a, string b)
+        static public int Counting(string searchWord, string sentence)
         {
-            return 1;
+            int counter = 0;
+            string[] words = sentence.Split(null);
+            Console.WriteLine(words.Length);
+            
+            foreach (string word in words)
+            {
+                if (searchWord.Equals(word))
+                {
+                    counter++;
+                }
+            }
+
+            return counter;
         }
     }
 }

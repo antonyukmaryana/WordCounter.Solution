@@ -11,9 +11,16 @@ namespace WordCounter.Tests
         public void Count_CountYourWordInTheString_Number()
         {
             //Act
-         RepeatCounter testRepeatCounter = new RepeatCounter();
           //Assert
-          Assert.AreEqual(1, testRepeatCounter.Counting("cat", "cat"));
+          Assert.AreEqual(1, RepeatCounter.Counting("cat", "cat"));
         }
+        
+        [TestMethod]
+            public void Count_CountYourWordInStringMultiple_Number()
+            {
+              //Act
+              //Assert
+              Assert.AreEqual(5, RepeatCounter.Counting("cat", "I love my cat cat cat cat cat"));
+            }
     }
 }
