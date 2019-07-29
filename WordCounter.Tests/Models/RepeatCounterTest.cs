@@ -26,6 +26,13 @@ namespace WordCounter.Tests
            
             Assert.AreEqual(2, RepeatCounter.Counting("cat", "Cat  cat - we yelled"));
         }
-
+[TestMethod]
+        public void Count_CountOnlyAlphaCharacters_Number()
+        {
+           
+            Assert.AreEqual(-1, RepeatCounter.Counting("123", "Cat  cat - we yelled"));
+        }
     }
+    
+    
 }

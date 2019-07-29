@@ -17,6 +17,12 @@ namespace WordCounter.Models
 
         static public int Counting(string searchWord, string sentence)
         {
+            int jj;
+            if (Int32.TryParse(searchWord, out jj))
+            {
+                return -1;
+            } 
+            
             int counter = 0;
             string[] words = sentence.Split(null);
             Console.WriteLine(words.Length);
